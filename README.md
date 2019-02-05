@@ -1,4 +1,4 @@
-# svg-placeholder
+# image-preview
 
 ## install dependencies
 
