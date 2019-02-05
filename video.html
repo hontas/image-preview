@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video placeholders</title>
+  <style>
+html {
+  box-sizing: border-box;
+}
+html * {
+  box-sizing: inherit;
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #806e6a;
+  color: white;
+  font-family: Helvetica Neue, system-ui, sans-serif;
+  margin: 0;
+}
+video, img {
+  width: 49.7%;
+  height: auto;
+  display: inline-block;
+}
+.flex-conyainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+a {
+  color: inherit;
+}
+  </style>
+</head>
+<body>
+  <header class="flex-conyainer">
+    <h2>Video 100K(webm) 3MB(mp4)</h2>
+    <h2>GIF 7.5MB</h2>
+  </header>
+
+  <video autoplay loop muted playsinline>
+    <source src="assets/pontus.webm"
+            type="video/webm">
+    <source src="assets/pontus.mp4"
+            type="video/mp4">
+  </video>
+  <img src="assets/pontus.gif" />
+
+  <p><a href="index.html">SVG vs WEBP</a></p>
+</body>
+</html>

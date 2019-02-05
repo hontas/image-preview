@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image placeholders</title>
+  <style>
+html {
+  box-sizing: border-box;
+}
+html * {
+  box-sizing: inherit;
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #806e6a;
+  color: white;
+  font-family: Helvetica Neue, system-ui, sans-serif;
+  margin: 0;
+}
+
+img {
+  width: 50%;
+  height: auto;
+  display: block;
+  float: left;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.blur-up {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transition: filter 400ms, -webkit-filter 400ms;
+}
+
+.blur-up.lazyloaded {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
+.image-container {
+  position: relative;
+  width: 50%;
+  padding-bottom: calc(74.93090909% / 2);
+  float: left;
+}
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  float: none;
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+.fade-in.lazyloaded {
+  opacity: 1;
+}
+.flex-conyainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+a {
+  color: inherit;
+}
+  </style>
+</head>
+<body>
+  <header class="flex-conyainer">
+    <h2>SVG with gaussian blur</h2>
+    <h2>WEBP with css filter blur</h2>
+  </header>
+  <div class="container">
+    <div class="image-container">
+      <img src="assets/prag.svg"/>
+      <img data-src="assets/prag.jpg" class="lazyload fade-in" />
+    </div>
+  <img
+    src="assets/prag.webp"
+    data-src="assets/prag.jpg" class="lazyload blur-up" />
+  </div>
+
+  <p><a href="video.html">Video instead of gif</a></p>
+
+  <script src="lazysizes.min.js" async=""></script>
+</body>
+</html>
