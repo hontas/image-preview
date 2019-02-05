@@ -2,16 +2,16 @@
 
 ## install dependencies
 
-- https://github.com/fogleman/primitive
-- https://github.com/technopagan/sqip
+https://github.com/fogleman/primitive  
+https://github.com/technopagan/sqip
 
 
-- `go` to get/run primitive
-- `primitive` to convert images to svg/gif
-- `imagequick` to support gif
-- `ffmpeg` to convert to mp4/webm
-- `sqip` to automate SVG with blur creation
-- `serve` to serve files
+`go` to get/run primitive  
+`primitive` to convert images to svg/gif  
+`imagequick` to support gif  
+`ffmpeg` to convert to mp4/webm  
+`sqip` to automate SVG with blur creation  
+`serve` to serve files
 
 ```shell
 brew install go ffmpeg imagemagick
